@@ -54,20 +54,10 @@ fun TextCell(text: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row {
-        Text(
-            text = "Large Text\n\nMore Text",
-            Modifier.alignBy(FirstBaseline),
-            fontSize = 40.sp,
-            fontWeight = FontWeight.Bold
-        )
-        Text(
-            text = "Small Text",
-            modifier = Modifier.paddingFrom(
-                alignmentLine = FirstBaseline, before = 80.dp, after = 0.dp),
-            fontSize = 32.sp,
-            fontWeight = FontWeight.Bold
-        )
+    Row(modifier = modifier.height(300.dp)) {
+        TextCell("1", Modifier.align(Alignment.Top))
+        TextCell("2", Modifier.align(Alignment.CenterVertically))
+        TextCell("3", Modifier.align(Alignment.Bottom))
     }
 
 
