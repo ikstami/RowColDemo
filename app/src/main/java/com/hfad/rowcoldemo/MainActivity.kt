@@ -20,6 +20,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.Alignment
+
 
 
 class MainActivity : ComponentActivity() {
@@ -49,14 +51,18 @@ fun TextCell(text: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(modifier.size(width = 400.dp, height = 200.dp)) {
-        TextCell("1")
-        TextCell("2")
-        TextCell("3")
+    Row {
+        Text(
+            text = "Large Text",
+            fontSize = 40.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Small Text",
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
-
-
-
 
 }
 
